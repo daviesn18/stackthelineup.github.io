@@ -46,7 +46,7 @@
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "5",
+    "ratingValue": "4.9",
     "ratingCount": "47"
   }
 }
@@ -97,7 +97,7 @@
         <a class="btn btn-ghost" href="#features">See how it works</a>
       </div>
       <div class="hero-meta">
-        <span class="pip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 5.0 average rating</span>
+        <span class="pip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.9 average rating</span>
         <span class="pip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> iPhone &amp; iPad</span>
         <span class="pip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> One-time $4.99</span>
       </div>
@@ -204,36 +204,91 @@
     <span class="kicker">More in the app</span>
     <h2>The whole coaching toolkit</h2>
   </div>
+  <p class="mini-hint" aria-hidden="true">Hover or tap a card to see the screen</p>
   <div class="mini-grid">
-    <div class="mini-card">
-      <div class="ic" style="background:var(--ios-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-      <h4>PDF exports for the field</h4>
-      <p>Export a clean batting order and defensive grid to print or share. Bring it to the dugout, no phone required.</p>
+    <div class="mini-card flip" role="button" tabindex="0" aria-label="Preview the PDF export screen">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="ic" style="background:var(--ios-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+          <h4>PDF exports for the field</h4>
+          <p>Export a clean batting order and defensive grid to print or share. Bring it to the dugout, no phone required.</p>
+          <span class="flip-hint">See the screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="flip-back" style="--tint:var(--ios-blue)">
+          <img src="assets/screen-pdf.png" alt="Coaches Guide PDF export showing the batting order and inning-by-inning defensive grid for the Rockhounds" />
+          <span class="flip-back-label">Coaches Guide PDF</span>
+        </div>
+      </div>
     </div>
-    <div class="mini-card">
-      <div class="ic" style="background:var(--ios-teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/><path d="M12 7v5l4 2"/></svg></div>
-      <h4>Game history &amp; season stats</h4>
-      <p>Archive each game when it ends. Track innings played, bench time, and position spread across the whole season.</p>
+    <div class="mini-card flip" role="button" tabindex="0" aria-label="Preview the game history screen">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="ic" style="background:var(--ios-teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/><path d="M12 7v5l4 2"/></svg></div>
+          <h4>Game history &amp; season stats</h4>
+          <p>Archive each game when it ends. Track innings played, bench time, and position spread across the whole season.</p>
+          <span class="flip-hint">See the screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="flip-back" style="--tint:var(--ios-teal)">
+          <img src="assets/screen-history.png" alt="History tab showing each player's innings, bench, infield, and outfield totals with a per-position breakdown across five games" />
+          <span class="flip-back-label">Season stats by player</span>
+        </div>
+      </div>
     </div>
-    <div class="mini-card">
-      <div class="ic" style="background:var(--ios-orange)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h7l2 3h9v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 7V5a1 1 0 0 1 1-1h4l2 3"/></svg></div>
-      <h4>Batting order, drag to reorder</h4>
-      <p>Tap Edit, then drag any player up or down. Your batting order carries over week to week so you start ahead.</p>
+    <div class="mini-card flip" role="button" tabindex="0" aria-label="Preview the batting order screen">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="ic" style="background:var(--ios-orange)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h7l2 3h9v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 7V5a1 1 0 0 1 1-1h4l2 3"/></svg></div>
+          <h4>Batting order, drag to reorder</h4>
+          <p>Tap Edit, then drag any player up or down. Your batting order carries over week to week so you start ahead.</p>
+          <span class="flip-hint">See the screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="flip-back tall" style="--tint:var(--ios-orange)">
+          <img src="assets/screen-lineup.png" alt="Lineup Builder showing the batting order with availability toggles, including an absent player toggled off, and drag handles for each player" />
+          <span class="flip-back-label">Lineup Builder</span>
+        </div>
+      </div>
     </div>
-    <div class="mini-card">
-      <div class="ic" style="background:var(--ios-green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9"/><path d="M3 15l4-4 4 3 5-5 5 5"/><path d="M12 19h9"/></svg></div>
-      <h4>GameChanger CSV import</h4>
-      <p>Already have your roster in GameChanger? Import it in seconds instead of typing every name and number.</p>
+    <div class="mini-card flip" role="button" tabindex="0" aria-label="Preview the GameChanger import screen">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="ic" style="background:var(--ios-green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9"/><path d="M3 15l4-4 4 3 5-5 5 5"/><path d="M12 19h9"/></svg></div>
+          <h4>GameChanger CSV import</h4>
+          <p>Already have your roster in GameChanger? Import it in seconds instead of typing every name and number.</p>
+          <span class="flip-hint">See the screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="flip-back" style="--tint:var(--ios-green)">
+          <img src="assets/screen-gamechanger.png" alt="Import Your Roster sheet with step-by-step instructions to export from GameChanger and a Choose File button" />
+          <span class="flip-back-label">Import your roster</span>
+        </div>
+      </div>
     </div>
-    <div class="mini-card">
-      <div class="ic" style="background:var(--ios-purple)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3v4M3 5h4M6 17v4M4 19h4"/><path d="m13 3 2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5z"/></svg></div>
-      <h4>Multiple teams</h4>
-      <p>Coaching more than one team? Switch between rosters and keep each season organized on its own.</p>
+    <div class="mini-card flip" role="button" tabindex="0" aria-label="Preview the multiple teams screen">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="ic" style="background:var(--ios-purple)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3v4M3 5h4M6 17v4M4 19h4"/><path d="m13 3 2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5z"/></svg></div>
+          <h4>Multiple teams</h4>
+          <p>Coaching more than one team? Switch between rosters and keep each season organized on its own.</p>
+          <span class="flip-hint">See the screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="flip-back tall" style="--tint:var(--ios-purple)">
+          <img src="assets/screen-teams.png" alt="My Teams switcher showing the Rockhounds and All-Stars rosters, the selected team highlighted with a checkmark, and an option to add a team" />
+          <span class="flip-back-label">Switch teams</span>
+        </div>
+      </div>
     </div>
-    <div class="mini-card">
-      <div class="ic" style="background:var(--brand-navy)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></div>
-      <h4>No ads, no clutter</h4>
-      <p>A native iOS app that does one thing well. No accounts to create, no ads between innings, no data to hand over.</p>
+    <div class="mini-card flip" role="button" tabindex="0" aria-label="Preview the fair play rules screen">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="ic" style="background:var(--ios-indigo)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h8M16 6h4M4 12h4M12 12h8M4 18h12M18 18h2"/><circle cx="14" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="16" cy="18" r="2"/></svg></div>
+          <h4>Customize fair play rules</h4>
+          <p>Set your own bench, fielding, and battery rules. The app checks every lineup against the limits you pick, or reset to defaults anytime.</p>
+          <span class="flip-hint">See the screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="flip-back" style="--tint:var(--ios-indigo)">
+          <img src="assets/screen-fairplay.png" alt="Fair Play Rules sheet with toggles for no back-to-back bench and equal bench time, steppers for minimum fielding, infield, and outfield innings, and catcher-to-pitcher restrictions" />
+          <span class="flip-back-label">Fair Play Rules</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -291,8 +346,8 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
       </div>
-      <p>"I used to spend an hour the night before every game in a spreadsheet. Now it's five minutes and I go into the game with confidence."</p>
-      <figcaption class="who"><span class="av">RM</span><span><span class="nm">Coach Ryan M.</span><br /><span class="rl">Little League, 10U</span></span></figcaption>
+      <p>"I used to spend an hour the night before every game in a spreadsheet. Now it's five minutes and nobody's parents are texting me about playing time."</p>
+      <figcaption class="who"><span class="av">RM</span><span><span class="nm">Coach Ryan M.</span><br /><span class="rl">Little League, 9U</span></span></figcaption>
     </figure>
     <figure class="quote" style="margin:0">
       <div class="stars" aria-label="5 out of 5 stars">
@@ -302,8 +357,8 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
       </div>
-      <p>"The fair-play warnings are the whole thing for me. It catches when I miss putting a kid in the infield when I'm dead tired just trying to put together a lineup. Worth way more than five bucks."</p>
-      <figcaption class="who"><span class="av">DL</span><span><span class="nm">Coach Dana L.</span><br /><span class="rl">Cal Ripken, 8U softball</span></span></figcaption>
+      <p>"The fair-play warnings are the whole thing for me. It catches when a kid would sit two innings in a row before I do. Worth way more than five bucks."</p>
+      <figcaption class="who"><span class="av">DL</span><span><span class="nm">Coach Dana L.</span><br /><span class="rl">Cal Ripken, 11U softball</span></span></figcaption>
     </figure>
     <figure class="quote" style="margin:0">
       <div class="stars" aria-label="5 out of 5 stars">
@@ -353,7 +408,7 @@
   <div class="narrow">
     <img class="icon-lg" src="assets/app-icon.png" alt="Stack the Lineup app icon" />
     <h2>Build your next lineup tonight</h2>
-    <p>Download Stack the Lineup and have a fair, finished lineup before your next game.</p>
+    <p>Download Stack the Lineup and have a fair, finished lineup before your next practice.</p>
     <a class="appstore-btn" href="https://apps.apple.com/us/app/stack-the-lineup/id6760155245" aria-label="Download on the App Store" style="margin:0 auto">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.36 12.78c-.02-2.18 1.78-3.23 1.86-3.28-1.01-1.48-2.59-1.69-3.15-1.71-1.34-.14-2.62.79-3.3.79-.68 0-1.73-.77-2.84-.75-1.46.02-2.81.85-3.56 2.16-1.52 2.64-.39 6.54 1.09 8.68.72 1.05 1.58 2.22 2.71 2.18 1.09-.04 1.5-.7 2.81-.7 1.31 0 1.68.7 2.83.68 1.17-.02 1.91-1.06 2.62-2.12.83-1.21 1.17-2.39 1.19-2.45-.03-.01-2.28-.87-2.3-3.46zM14.2 6.18c.6-.73 1.01-1.74.9-2.75-.87.04-1.92.58-2.54 1.3-.55.64-1.04 1.67-.91 2.65.97.08 1.96-.49 2.55-1.2z"/></svg>
       <span class="as-text"><span class="as-small">Download on the</span><span class="as-big">App Store</span></span>
@@ -380,7 +435,7 @@
       <a href="faq.html">FAQ</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:support@stackthelineup.com">support@stackthelineup.com</a>
+      <a href="/cdn-cgi/l/email-protection#d6a5a3a6a6b9a4a296a5a2b7b5bda2beb3babfb8b3a3a6f8b5b9bb"><span class="__cf_email__" data-cfemail="a0d3d5d0d0cfd2d4e0d3d4c1c3cbd4c8c5ccc9cec5d5d08ec3cfcd">[email&#160;protected]</span></a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -388,6 +443,16 @@
     <span>Made for coaches who'd rather be coaching.</span>
   </div>
 </footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  document.querySelectorAll('.mini-card.flip').forEach(function (card) {
+    function toggle() { card.classList.toggle('is-flipped'); }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+</script>
 
 </body>
 </html>
