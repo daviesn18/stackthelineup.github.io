@@ -244,6 +244,7 @@ section { padding: 92px 0; }
    Feature mini-grid
    --------------------------------------------------------------------------- */
 .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+.mini-hint { text-align: center; font-size: 14px; color: var(--label-tertiary); margin: -8px auto 26px; }
 .mini-card {
   background: var(--bg-system); border: 1px solid var(--separator);
   border-radius: var(--radius-lg); padding: 30px 28px; box-shadow: var(--shadow-sm);
@@ -255,6 +256,66 @@ section { padding: 92px 0; }
 .mini-card .ic svg { width: 24px; height: 24px; color: #fff; }
 .mini-card h4 { font-size: 19px; font-weight: 650; }
 .mini-card p { font-size: 15.5px; color: var(--label-secondary); margin-top: 9px; line-height: 1.5; }
+
+/* Flip cards — front shows the feature, back peeks the real screen */
+.mini-card.flip {
+  padding: 0; min-height: 462px; background: transparent;
+  border: none; box-shadow: none; cursor: pointer; perspective: 1500px;
+  -webkit-tap-highlight-color: transparent;
+}
+.mini-card.flip:focus-visible { outline: 2px solid var(--ios-blue); outline-offset: 3px; border-radius: var(--radius-lg); }
+.flip-inner {
+  position: relative; width: 100%; height: 100%; min-height: inherit;
+  transform-style: preserve-3d; transition: transform .62s cubic-bezier(.2,.72,.22,1);
+}
+.mini-card.flip.is-flipped .flip-inner { transform: rotateY(180deg); }
+@media (hover: hover) and (pointer: fine) {
+  .mini-card.flip:hover .flip-inner { transform: rotateY(180deg); }
+}
+.flip-front, .flip-back {
+  position: absolute; inset: 0; border-radius: var(--radius-lg); overflow: hidden;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.flip-front {
+  background: var(--bg-system); border: 1px solid var(--separator);
+  box-shadow: var(--shadow-sm); padding: 30px 28px;
+  display: flex; flex-direction: column;
+}
+.flip-hint {
+  margin-top: auto; padding-top: 20px; display: inline-flex; align-items: center;
+  gap: 7px; font-size: 13.5px; font-weight: 600; color: var(--ios-blue);
+}
+.flip-hint svg { width: 15px; height: 15px; transition: transform .25s ease; }
+@media (hover: hover) and (pointer: fine) {
+  .mini-card.flip:hover .flip-hint svg { transform: translateX(3px); }
+}
+.flip-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(168deg, color-mix(in srgb, var(--tint) 18%, #fff), color-mix(in srgb, var(--tint) 6%, #fff));
+  border: 1px solid color-mix(in srgb, var(--tint) 26%, var(--separator));
+  display: flex; align-items: flex-start; justify-content: center;
+}
+.flip-back img {
+  width: 82%; max-width: 268px; margin-top: 22px;
+  filter: drop-shadow(0 20px 38px rgba(20,35,72,0.26));
+}
+.flip-back::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 96px;
+  background: linear-gradient(transparent, color-mix(in srgb, var(--tint) 7%, #fff));
+  pointer-events: none;
+}
+/* Cards whose key content sits low (Lineup availability toggle, My Teams list) show the full screen */
+.flip-back.tall { align-items: flex-start; }
+.flip-back.tall img { width: 88%; max-width: 210px; margin-top: 10px; }
+.flip-back.tall::after { height: 40px; }
+.flip-back.tall .flip-back-label { display: none; }
+.flip-back-label {
+  position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+  background: rgba(255,255,255,0.86); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  color: var(--label-primary); font-size: 12.5px; font-weight: 600; letter-spacing: .01em;
+  padding: 6px 14px; border-radius: var(--radius-pill); box-shadow: var(--shadow-sm); z-index: 1;
+}
+@media (prefers-reduced-motion: reduce) { .flip-inner { transition: none; } }
 
 /* ---------------------------------------------------------------------------
    Pricing
