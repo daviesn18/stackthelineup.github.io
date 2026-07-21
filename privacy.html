@@ -4,13 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Privacy Policy — Stack the Lineup</title>
-<meta name="description" content="Stack the Lineup privacy policy. Your roster and lineup data stay on your device. No account, no ads, no selling of personal data." />
+<meta name="description" content="Stack the Lineup privacy policy. No account, no ads, nothing sold. Your roster syncs through your own iCloud, and we explain exactly what leaves your device." />
 <link rel="canonical" href="https://stackthelineup.com/privacy.html" />
 <meta name="theme-color" content="#1B2C5D" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Stack the Lineup" />
 <meta property="og:title" content="Stack the Lineup — Privacy Policy" />
-<meta property="og:description" content="Your roster and lineup data stay on your device. No account, no ads, no selling of personal data." />
+<meta property="og:description" content="No account, no ads, nothing sold. Your roster syncs through your own iCloud, and we explain exactly what leaves your device." />
 <meta property="og:url" content="https://stackthelineup.com/privacy.html" />
 <meta property="og:image" content="https://stackthelineup.com/assets/app-icon.png" />
 <link rel="apple-touch-icon" href="assets/app-icon.png" />
@@ -42,40 +42,70 @@
 <div class="page-hero">
   <div class="narrow">
     <h1>Privacy Policy</h1>
-    <p>Short version: your team's data stays on your device. No account, no ads, nothing sold.</p>
+    <p>Short version: no account, no ads, nothing sold. Your roster syncs through your own iCloud, and we spell out exactly what leaves your device.</p>
   </div>
 </div>
 
 <div class="prose">
-  <p class="updated">Last updated: June 9, 2026</p>
+  <p class="updated">Last updated: July 20, 2026</p>
 
   <h2>The short version</h2>
-  <p>Stack the Lineup is a planning tool that runs on your iPhone and iPad. Your roster, lineups, position assignments, and game history are stored on your device. We do not require an account, we do not show ads, and we do not sell your personal information.</p>
+  <p>Stack the Lineup is a planning tool for youth baseball and softball coaches. You don't create an account with us, we don't show ads, and we don't sell your personal information. Most of what you enter lives on your device and in your own iCloud account, where we can't read it. A few specific things do leave your device, and the sections below say exactly what they are.</p>
 
-  <h2>Information stored on your device</h2>
-  <p>The information you enter to build lineups stays on your device (and in your personal iCloud backup, if you have device backups enabled):</p>
+  <h2>What you enter</h2>
+  <p>To build a lineup, you enter things like:</p>
   <ul>
-    <li>Player names, jersey numbers, and position preferences you add</li>
+    <li>Player names, jersey numbers, league age, and position preferences</li>
     <li>Batting orders, inning-by-inning position assignments, and game info such as date and opponent</li>
-    <li>Archived games and the season stats calculated from them</li>
+    <li>Archived games, notes you add to them, pitch counts, and the season stats calculated from them</li>
     <li>Any roster you import from a GameChanger CSV file</li>
   </ul>
-  <p>This information is not transmitted to us. We have no server that stores your roster or lineups.</p>
+  <p>This information is stored on your device and, as described next, in your own iCloud account.</p>
+
+  <h2>iCloud sync and Shared Teams</h2>
+  <p>Stack the Lineup uses Apple's iCloud (CloudKit) to keep your teams available across your devices and to power Shared Teams. This means your roster and game data are stored in <em>your</em> iCloud account on Apple's servers, not on ours. Because it sits in your private iCloud database, we have no ability to read it.</p>
+  <p>If you use <strong>Shared Teams</strong> to invite an assistant coach, the team you share — including the roster, lineups, position assignments, and any game notes — becomes visible to the coaches you invite. Only share a team with people you intend to give that access. You can stop sharing or change a participant's access at any time from Edit Team.</p>
+  <p>Apple's handling of iCloud data is governed by Apple's privacy policy.</p>
+
+  <h2>Push notifications</h2>
+  <p>If you allow notifications, the app registers with Apple's push service and stores a device token, along with the team ID and the coach name on that team, in iCloud so notifications can reach the right devices.</p>
+  <p>We operate one small server (a Cloudflare Worker) whose only job is sending these notifications — for example, letting assistant coaches know when a lineup has been finalized. When that happens, the app sends that server the team ID, the team name, the coach name that triggered it, and the game's opponent and date. <strong>It does not send player names or your roster.</strong> These messages are used to deliver the notification and are not used to build a profile of you or sold to anyone.</p>
+  <p>You can turn notifications off at any time in your device settings.</p>
+
+  <h2>Analytics</h2>
+  <p>We use <a href="https://telemetrydeck.com/privacy/">TelemetryDeck</a>, a privacy-focused analytics service, to understand which features get used so we know what to improve. It records events such as "app opened," "auto-fill used," or "PDF exported," along with simple counts like how many players are on a roster.</p>
+  <p>These events do not include player names, team names, opponent names, or any of your roster or lineup content. TelemetryDeck does not track you across other apps or websites, and we do not use advertising networks. Analytics are never sent from the iOS Simulator.</p>
+  <p>Separately, if you have opted in to share analytics and crash data with developers in your device settings, Apple may provide us with anonymized, aggregated diagnostic reports. You can turn that off in your device settings.</p>
+
+  <h2>AI Coaching Insights</h2>
+  <p>Coaching Insights and the natural-language instructions for Auto-Fill run on your device using Apple Intelligence. Your roster and game history are not sent to us or to any outside AI service to generate them.</p>
+
+  <h2>Schedule import</h2>
+  <p>If you import a season schedule, the app fetches the calendar link you provide (for example, a GameChanger calendar URL) directly from that provider. We don't receive that schedule. Whatever you fetch is governed by that provider's own privacy policy.</p>
 
   <h2>Purchases</h2>
-  <p>Stack the Lineup Pro is a one-time in-app purchase processed by Apple through the App Store. We never see or store your payment details. Apple handles the transaction and provides us only with the information needed to confirm that a purchase was made so Pro features can be unlocked. Apple's handling of payment data is governed by Apple's privacy policy.</p>
-
-  <h2>Diagnostics</h2>
-  <p>If you have opted in to share analytics and crash data with developers in your device settings, Apple may provide us with anonymized, aggregated diagnostic reports to help us fix bugs and improve performance. These reports do not identify you and do not include your roster or lineup content. You can turn this off at any time in your device settings.</p>
+  <p>Stack the Lineup Pro is sold through Apple's App Store, either as a subscription or, for coaches who bought it earlier, as a one-time purchase. Apple processes the transaction. We never see or store your payment details. Apple provides us only with what's needed to confirm a purchase is active so Pro features unlock. Apple's handling of payment data is governed by Apple's privacy policy.</p>
 
   <h2>Children's privacy</h2>
-  <p>Stack the Lineup is designed for coaches, who are adults. While the app helps you manage information about youth players, that information is entered by you, the coach, and is stored only on your device. We do not knowingly collect personal information from children, and we do not transmit player information off your device.</p>
+  <p>Stack the Lineup is built for coaches, who are adults. The app is not directed at children, and we do not knowingly collect personal information directly from children.</p>
+  <p>The app does hold information <em>about</em> youth players — names, jersey numbers, and league age — because you enter it to build a lineup. That information is stored on your device and in your own iCloud account, and is shared only with coaches you explicitly invite through Shared Teams. It is never sold, never used for advertising, and never sent to our analytics.</p>
+  <p>As the coach, you are responsible for having appropriate permission from parents or guardians to record player information, and for following your league's rules on handling it.</p>
 
   <h2>Third parties</h2>
-  <p>We do not use third-party advertising networks or analytics SDKs that track you across apps. The only third party involved in normal use is Apple, for app distribution and in-app purchases.</p>
+  <p>The only third parties involved in normal use are:</p>
+  <ul>
+    <li><strong>Apple</strong> — app distribution, in-app purchases, iCloud storage and sharing, and push delivery</li>
+    <li><strong>TelemetryDeck</strong> — anonymous product analytics, as described above</li>
+    <li><strong>Cloudflare</strong> — hosts the small server that sends notifications</li>
+  </ul>
+  <p>We do not use advertising networks, and we do not sell or share your personal information for advertising.</p>
+
+  <h2>Data retention</h2>
+  <p>Roster and game data stay in your device and iCloud storage until you delete them. Notification device tokens are kept only while they're valid and are replaced or cleaned up as devices change. Analytics events are retained by TelemetryDeck in anonymized form.</p>
 
   <h2>Your control</h2>
-  <p>Because your data lives on your device, you control it. Deleting a player, a game, or the app itself removes the associated data from your device. Restoring a Pro purchase on a new device does not transfer your roster; lineup data moves with your device backup, not through us.</p>
+  <p>Deleting a player, a team, a game, or the app removes that data from your device and from your iCloud storage. Stopping a Shared Team removes other coaches' access. Turning off notifications stops the notification messages described above. Restoring a purchase on a new device restores Pro access, not your roster — roster data moves through your iCloud account.</p>
+  <p>If you're in a region with rights of access, correction, deletion, or portability (such as the EU, UK, or California), you can exercise them by emailing us. Because we don't hold your roster, most of that data is already under your direct control on your device and in your iCloud account.</p>
 
   <h2>Changes to this policy</h2>
   <p>If this policy changes, we will update the date at the top and post the revised version here. Material changes will be reflected in an app update where appropriate.</p>
@@ -102,6 +132,7 @@
       <a href="faq.html">FAQ</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
       <a href="mailto:support@stackthelineup.com">support@stackthelineup.com</a>
     </div>
   </div>
