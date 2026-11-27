@@ -1,0 +1,9 @@
+# Files in the repo root that aren't part of the website (the root is the
+# assets directory; see wrangler.jsonc).
+.git
+.gitignore
+.assetsignore
+.wrangler
+.DS_Store
+wrangler.jsonc
+README.md

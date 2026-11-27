@@ -1,0 +1,22 @@
+// Cloudflare Worker that serves this static site (www.stackthelineup.com; the
+// apex 301s to www through a Redirect Rule in the dashboard).
+//
+// Until this file existed, `npx wrangler deploy` generated exactly this config
+// on every production build. It's committed so pull-request builds work:
+// Cloudflare builds non-production branches with `npx wrangler preview`, which
+// refuses to run without a `previews` block. Empty is fine: the settings above
+// it apply to previews too.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "stackthelineup-github-io",
+  "compatibility_date": "2026-11-09",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    // The repo root is the site. Files that aren't pages are left out by
+    // .assetsignore.
+    "directory": "."
+  },
+  "previews": {}
+}
