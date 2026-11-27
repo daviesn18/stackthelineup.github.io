@@ -122,6 +122,12 @@ p { margin: 0; text-wrap: pretty; }
 .btn-ghost:hover { background: rgba(255,255,255,0.2); }
 .btn-light { background: #fff; color: var(--brand-navy); box-shadow: var(--shadow-sm); }
 .btn-sm { padding: 9px 17px; font-size: 14px; }
+/* Secondary pill on a light background: the nav's Log in, beside Download. */
+.btn-outline { background: transparent; color: var(--ios-blue); box-shadow: inset 0 0 0 1.5px var(--ios-blue); }
+.btn-outline:hover { background: rgba(0,122,255,0.08); }
+/* .nav-links a sets the plain links' color; keep the pills' own colors. */
+.nav-links a.btn-outline { color: var(--ios-blue); }
+.nav-links a.btn-primary { color: #fff; }
 
 /* App Store badge button */
 .appstore-btn {
@@ -439,7 +445,8 @@ section { padding: 92px 0; }
   section { padding: 64px 0; }
 }
 @media (max-width: 620px) {
-  .nav-links { display: none; }
+  /* Phones keep only Log in from the nav row (the hero has the App Store badge). */
+  .nav-links > :not(.nav-login) { display: none; }
   .nav-links.compact { display: flex; gap: 14px; }
   body { font-size: 17px; }
 }
